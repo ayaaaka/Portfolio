@@ -4,49 +4,80 @@
 
 /* 追加のカスタムスタイルをここに記述 */
 .container {
-  display: flex;
+    display: flex;
 }
 
 .left-column {
-  width: 30%;
-  padding: 20px;
-  border-right: 1px solid #ddd;
+    width: 30%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
 }
 
 .right-column {
-  width: 70%;
-  padding: 20px;
+    width: 70%;
+    padding: 20px;
 }
 
 .personal-info {
-  text-align: center;
+    text-align: center;
 }
 
 .profile-picture {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
 
 .skill-bar {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 .skill-bar .bar {
-  background: #eee;
-  border-radius: 5px;
-  overflow: hidden;
+    background: #eee;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .skill-bar .fill {
-  background: #3498db;
-  height: 10px;
+    background: #3498db;
+    height: 10px;
 }
 
 .language-skill {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 .work-experience {
-  margin: 20px 0;
+    margin: 20px 0;
 }
+
+.language-skill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 16px; /* 適宜調整してください */
+  }
+  
+  .language-skill .items-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  .language-skill .items-center .flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .language-skill .items-center span:first-child {
+    margin-right: 10px; /* 言語名とドットの間のスペース */
+  }
+  
+  .language-skill .items-center .flex span {
+    width: 10px; /* ドットのサイズ */
+    height: 10px; /* ドットのサイズ */
+    border-radius: 50%; /* 円形にする */
+    background-color: #000; /* 初期色 */
+    margin: 0 2px; /* ドット間のスペース */
+  }
+  

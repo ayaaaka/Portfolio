@@ -1,16 +1,14 @@
 import React from 'react';
 
-const PersonalInfo = () => {
+const PersonalInfo = ({imageUrl}) => {
   return (
     <div className="personal-info">
-      <img src="/profile.jpg" alt="Profile Picture" className="profile-picture" />
-      <h2>山田 花子</h2>
-      <p>Webデザイナー / デジタルマーケター</p>
-      <p>1981 / 07 / 23</p>
-      <p>東京都杉並区OOO1-2-3</p>
-      <p>090-0000-0000</p>
-      <p>hanakoyamada@gmail.com</p>
-      <p><a href="https://www.portfolio.com">https://www.portfolio.com</a></p>
+      <img src={imageUrl} alt="Profile Picture" className="profile-picture" />
+      <h2>Ayaka Kobayashi</h2>
+      <p>フルスタックエンジニア</p>
+      <p>1997 / 02 / 28</p>
+      <p>東京都西東京市ひばりが丘</p>
+      <p>elnr28br@gmail.com</p>
     </div>
   );
 };
