@@ -1,12 +1,11 @@
 import React from 'react';
 
 const LanguageSkill = ({ language, level }) => {
+  const numericLevel = parseInt(level, 10);
   const dots = Array(5).fill(0).map((_, index) => (
     <span
       key={index}
-      className={`inline-block ${
-        index < level ? 'bg-black' : 'bg-gray-300'
-      }`}
+      className={`border ${index < numericLevel ? 'bg-black border-black' : 'bg-white border-black'}`}
     ></span>
   ));
 

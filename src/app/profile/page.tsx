@@ -11,7 +11,7 @@ import { faHeart, faLanguage } from '@fortawesome/free-solid-svg-icons';
 
 const ProfilePage = () => {
   return (
-    <div className="container items-center space-y-10">
+    <div className="container space-y-10">
       <Navbar />
       <div className="left-column ">
         <PersonalInfo imageUrl={'/img/profile/bear.png'}/>
