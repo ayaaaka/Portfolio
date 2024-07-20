@@ -1,19 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-// import Navbar from './components/Navbar';
+import Navbar from '@/components/Navbar';
 
 const HomePage = () => {
   return (
     <div>
-      {/* <Navbar /> */}
-      <h1>Home Page</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link href="/skill">Go to skill</Link>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
+      <h1>なんか画像とか置く</h1>
     </div>
   );
 };

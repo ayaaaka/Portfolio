@@ -3,15 +3,16 @@ import PersonalInfo from '../../components/PersonalInfo';
 import SkillBar from '../../components/SkillBar';
 import LanguageSkill from '../../components/LanguageSkill';
 import WorkExperience from '../../components/WorkExperience';
-import Image from 'next/image';
+import Navbar from '@/components/Navbar';
 import '../../styles/profile.css';
 
 
 const ProfilePage = () => {
   return (
-    <div className="container">
-      <div className="left-column">
-        <PersonalInfo imageUrl={'img/profile/bear.png'}/>
+    <div className="container items-center space-y-14">
+      <Navbar />
+      <div className="left-column ">
+        <PersonalInfo imageUrl={'/img/profile/bear.png'}/>
         <br />
         <div className="personal-skills">
           <h2>パーソナルスキル</h2>

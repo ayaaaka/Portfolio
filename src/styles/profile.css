@@ -2,9 +2,9 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* 追加のカスタムスタイルをここに記述 */
 .container {
     display: flex;
+    margin-top: 10px;
 }
 
 .left-column {

@@ -1,14 +1,11 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/01ZhSINo4YH
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import Navbar from '@/components/Navbar';
 
 export default function Component() {
   return (
-    <div className="flex flex-col items-center p-4 space-y-4">
+    <div className="flex flex-col items-center p-4 space-y-14">
+      <Navbar />
       <div className="text-2xl font-bold">ayaka's portfolio</div>
       <div className="flex space-x-2">
         <Button variant="outline">profile</Button>
