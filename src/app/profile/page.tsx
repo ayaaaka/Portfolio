@@ -3,19 +3,21 @@ import PersonalInfo from '../../components/PersonalInfo';
 import SkillBar from '../../components/SkillBar';
 import LanguageSkill from '../../components/LanguageSkill';
 import WorkExperience from '../../components/WorkExperience';
+import TitleWithIcon from '../../components/TitleWithIcon';
 import Navbar from '@/components/Navbar';
 import '../../styles/profile.css';
+import { faHeart, faLanguage } from '@fortawesome/free-solid-svg-icons';
 
 
 const ProfilePage = () => {
   return (
-    <div className="container items-center space-y-14">
+    <div className="container items-center space-y-10">
       <Navbar />
       <div className="left-column ">
         <PersonalInfo imageUrl={'/img/profile/bear.png'}/>
         <br />
+        <TitleWithIcon icon={faHeart} title={'パーソナルスキル'} />
         <div className="personal-skills">
-          <h2>パーソナルスキル</h2>
           <SkillBar skill="創造性" percentage={70} />
           <SkillBar skill="革新性" percentage={70} />
           <SkillBar skill="チームワーク" percentage={100} />
@@ -25,7 +27,7 @@ const ProfilePage = () => {
         </div>
         <br />
         <div className="language-skills">
-          <h2>語学</h2>
+          <TitleWithIcon icon={faLanguage} title={'語学'} />
           <LanguageSkill language="日本語" level={5} />
           <LanguageSkill language="英語" level={2} />
         </div>
