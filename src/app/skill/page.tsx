@@ -6,14 +6,8 @@ export default function Component() {
   return (
     <div className="flex flex-col items-center p-4 space-y-14">
       <Navbar />
-      <div className="text-2xl font-bold">ayaka's portfolio</div>
-      <div className="flex space-x-2">
-        <Button variant="outline">profile</Button>
-        <Button variant="default">skill</Button>
-        <Button variant="outline">contact</Button>
-      </div>
-      <div className="grid grid-cols-2 gap-4">
-        <Card className="w-full">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 w-full max-w-7xl">
+      <Card className="w-full">
           <CardHeader>
             <CardTitle>frontend</CardTitle>
           </CardHeader>
