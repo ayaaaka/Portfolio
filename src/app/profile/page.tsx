@@ -6,7 +6,7 @@ import WorkExperience from '../../components/WorkExperience';
 import TitleWithIcon from '../../components/TitleWithIcon';
 import Navbar from '@/components/Navbar';
 import '../../styles/profile.css';
-import { faHeart, faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { faHeart,  faComment } from '@fortawesome/free-solid-svg-icons';
 
 const ProfilePage = () => {
   return (
@@ -26,7 +26,7 @@ const ProfilePage = () => {
         </div>
         <br />
         <div className="language-skills">
-          <TitleWithIcon icon={faLanguage} title={'語学'} />
+          <TitleWithIcon icon={faComment} title={'語学'} />
           <LanguageSkill language="日本語" level={5} />
           <LanguageSkill language="英語" level={2} />
         </div>
@@ -61,12 +61,12 @@ const ProfilePage = () => {
           />
           <WorkExperience 
             year="2019" 
-            company="株式会社 VOYAGE GROUP 入社" 
-            role="webエンジニア 正社員" 
+            company="株式会社 VOYAGE GROUP" 
+            role="webエンジニア 正社員 新卒入社" 
             details={["自社開発", "ポイントサイトの設計・開発・保守"]} 
           />
           <WorkExperience 
-            year="2020" 
+            year="2022" 
             company="株式会社 CARTA HOLDINGS" 
             role="フルスタックエンジニア 正社員" 
             details={["自社開発", "ポイントサイトの企画・設計・開発・保守", "プロダクトマネージャー"]} 

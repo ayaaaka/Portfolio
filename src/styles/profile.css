@@ -20,23 +20,23 @@
 
 /* スマートフォンビューでのレイアウト */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* 縦に並べる */
-    align-items: center; /* コンテンツを中央寄せ */
-  }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .left-column,
-  .right-column {
-    width: 100%; /* 幅を全幅に設定 */
-    padding: 20px; /* パディングはそのままに */
-    border-right: none; /* 右ボーダーを削除 */
-    border-bottom: 1px solid #ddd; /* 下にボーダーを追加 */
-    box-sizing: border-box; /* パディングを含めてサイズ計算 */
-  }
+    .left-column,
+    .right-column {
+        width: 100%;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        box-sizing: border-box;
+    }
 
-  .right-column {
-    border-bottom: none; /* 右カラムの下ボーダーを削除 */
-  }
+    .right-column {
+        border-bottom: none; /* 右カラムの下ボーダーを削除 */
+    }
 }
 
 /* icon */
@@ -51,9 +51,49 @@
     border-radius: 50%;
 }
 
+/* Left barのtitle */
+.lefttitle-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+  
+.lefttitle {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0 10px; /* 左右の線との間隔 */
+}
+  
+.lefttitle-container::before,
+.lefttitle-container::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: black;
+    flex-grow: 1;
+}
+  
+.lefttitle-container::before {
+    margin-right: 10px;
+}
+  
+.lefttitle-container::after {
+    margin-left: 10px;
+}
+  
+@media (max-width: 768px) {
+    .lefttitle-container::before,
+    .lefttitle-container::after {
+        flex-grow: 1; /* スマホでは幅いっぱいに */
+    }
+}
+  
 /* パーソナルスキル */
 .skill-bar {
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .skill-bar .bar {
@@ -90,7 +130,7 @@
 /* 職務履歴 */
 .right-column h1 {
     position: relative;
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 5px;
 }
   
