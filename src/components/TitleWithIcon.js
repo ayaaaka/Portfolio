@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import '../styles/profile.css';
+import '../styles/resume.css';
 config.autoAddCss = false;
 
 const TitleWithIcon = ({icon, title}) => {

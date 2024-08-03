@@ -5,15 +5,15 @@ import LanguageSkill from '../../components/LanguageSkill';
 import WorkExperience from '../../components/WorkExperience';
 import TitleWithIcon from '../../components/TitleWithIcon';
 import Navbar from '@/components/Navbar';
-import '../../styles/profile.css';
+import '../../styles/resume.css';
 import { faHeart,  faComment } from '@fortawesome/free-solid-svg-icons';
 
-const ProfilePage = () => {
+const ResumePage = () => {
   return (
     <div className="container space-y-10">
       <Navbar />
       <div className="left-column ">
-        <PersonalInfo imageUrl={'/img/profile/bear.png'}/>
+        <PersonalInfo imageUrl={'/img/resume/bear.png'}/>
         <br />
         <TitleWithIcon icon={faHeart} title={'パーソナルスキル'} />
         <div className="personal-skills">
@@ -77,4 +77,4 @@ const ProfilePage = () => {
   );
 };
 
-export default ProfilePage;
+export default ResumePage;
