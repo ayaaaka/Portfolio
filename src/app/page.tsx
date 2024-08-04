@@ -20,7 +20,7 @@ const ProfilePage = () => {
           className="w-full object-cover"
         />
         <div className="absolute inset-0 flex justify-center items-center">
-          <h1 className="profile-titile">Welcome to Ayaka's Portfolio</h1>
+          <h1 className="profile-titile">{`Welcome to Ayaka's Portfolio`}</h1>
         </div>
       </div>
 
