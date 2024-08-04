@@ -17,12 +17,12 @@ const ResumePage = () => {
         <br />
         <TitleWithIcon icon={faHeart} title={'パーソナルスキル'} />
         <div className="personal-skills">
-          <SkillBar skill="創造性" percentage={70} />
-          <SkillBar skill="革新性" percentage={70} />
-          <SkillBar skill="チームワーク" percentage={100} />
-          <SkillBar skill="コミュニケーション" percentage={80} />
+          <SkillBar skill="創造性" percentage={50} />
+          <SkillBar skill="革新性" percentage={50} />
+          <SkillBar skill="チームワーク" percentage={90} />
+          <SkillBar skill="コミュニケーション" percentage={70} />
           <SkillBar skill="組織化・編成" percentage={60} />
-          <SkillBar skill="リーダーシップ" percentage={90} />
+          <SkillBar skill="リーダーシップ" percentage={80} />
         </div>
         <br />
         <div className="language-skills">
