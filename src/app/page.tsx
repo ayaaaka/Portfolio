@@ -12,7 +12,7 @@ const ProfilePage = () => {
       <Navbar />
       <div className="relative">
         <Image
-          src="/img/profile/fire-flower.jpg"
+          src="/img/profile/fire-flower.png"
           alt="Profile Picture"
           layout="responsive"
           width={1920}
