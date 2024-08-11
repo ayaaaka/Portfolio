@@ -1,11 +1,12 @@
 import React from 'react';
+import styles from '@/styles/Resume.module.scss';
 
 const SkillBar = ({ skill, percentage }) => {
   return (
-    <div className="skill-bar">
+    <div className={styles.skillBar}>
       <p>{skill} {percentage}%</p>
-      <div className="bar">
-        <div className="fill" style={{ width: `${percentage}%` }}></div>
+      <div className={styles.bar}>
+        <div className={styles.fill} style={{ width: `${percentage}%` }}></div>
       </div>
     </div>
   );

@@ -1,9 +1,8 @@
 import React from 'react';
+import styles from '@/styles/Resume.module.scss';
 
 const LanguageSkill = ({ language, level }) => {
-  const numericLevel = parseInt(level, 10);
   const dots = Array(5).fill(0).map((_, index) => (
-    //TODO: きれいにしたい
     <span
       key={index}
       style={{
@@ -12,16 +11,17 @@ const LanguageSkill = ({ language, level }) => {
         borderRadius: '50%',
         margin: '0 4px',
         border: '1px solid black',
-        backgroundColor: index < level ? 'black' : 'white'
+        backgroundColor: index < level ? 'black' : 'white',
+        display: 'inline-block'
       }}
     ></span>
   ));
 
   return (
-    <div className="language-skill">
-      <div className="items-center">
-        <span>{language}</span>
-        <div className="flex">{dots}</div>
+    <div className={styles.languageSkill}>
+      <div className={styles.itemsCenter}>
+        <div className={styles.flex}>{language}</div>
+        <div>{dots}</div>
       </div>
     </div>
   );

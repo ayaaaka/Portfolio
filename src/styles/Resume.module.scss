@@ -1,0 +1,176 @@
+.wrapper {
+    display: flex;
+    margin-top: 40px;
+    padding: 1rem 3rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    } 
+}
+
+.leftColumn {
+    width: 30%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        box-sizing: border-box;
+    }
+}
+
+.rightColumn {
+    width: 70%;
+    padding: 20px 20px 30px 20px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        position: relative;
+        font-size: 25px;
+        margin-bottom: 5px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: black;
+        }
+    }
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.resumePicture {
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.lefttitleContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        &::before,
+        &::after {
+            flex-grow: 1; /* スマホでは幅いっぱいに */
+        }
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        height: 2px;
+        background-color: black;
+        flex-grow: 1;
+    }
+
+    &::before {
+        margin-right: 10px;
+    }
+
+    &::after {
+        margin-left: 10px;
+    }
+}
+
+.lefttitle {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    white-space: nowrap;
+    margin: 0 10px; /* 左右の線との間隔 */
+}
+
+/* パーソナルスキル */
+.skillBar {
+    margin: 20px 0;
+}
+.bar {
+    background: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.fill {
+    background: #3498db;
+    height: 10px;
+}
+
+/* 語学 */
+.languageSkill {
+    margin: 10px 0;
+    font-size: 16px;
+}
+.itemsCenter {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.flex {
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: right;
+}
+
+/* 職務履歴 */
+.rightColumn h1 {
+    position: relative;
+    font-size: 25px;
+    margin-bottom: 5px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: black;
+    }
+}
+
+/* 職務詳細 */
+.workDetails {
+    margin: 20px 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        top: 0;
+        bottom: 0;
+        border-left: 2px dotted gray;
+    }
+}
+
+.workExperience {
+    &::before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        top: 0;
+        bottom: 10px;
+        width: 0;
+        border-left: 2px solid gray;
+    }
+}   

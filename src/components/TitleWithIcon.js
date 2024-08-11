@@ -1,15 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import '../styles/resume.css';
-config.autoAddCss = false;
+import styles from '@/styles/Resume.module.scss';
 
 const TitleWithIcon = ({icon, title}) => {
   return (
     <div className="flex flex-col items-center mt-10">
       <FontAwesomeIcon icon={icon} size='xl' />
-    <h2 className="text-2xl lefttitle-container">{title}</h2>
+    <h2 className={`text-2xl ${styles.lefttitleContainer}`}>{title}</h2>
   </div>
   );
 };

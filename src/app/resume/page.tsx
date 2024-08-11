@@ -5,18 +5,18 @@ import LanguageSkill from '../../components/LanguageSkill';
 import WorkExperience from '../../components/WorkExperience';
 import TitleWithIcon from '../../components/TitleWithIcon';
 import Navbar from '@/components/Navbar';
-import '../../styles/resume.css';
+import styles from '@/styles/Resume.module.scss';
 import { faHeart,  faComment } from '@fortawesome/free-solid-svg-icons';
 
 const ResumePage = () => {
   return (
-    <div className="container space-y-10">
+    <div className={styles.wrapper}>
       <Navbar />
-      <div className="left-column ">
+      <div className={styles.leftColumn}>
         <PersonalInfo imageUrl={'/img/resume/bear.png'}/>
         <br />
         <TitleWithIcon icon={faHeart} title={'パーソナルスキル'} />
-        <div className="personal-skills">
+        <div className={styles.personalSkills}>
           <SkillBar skill="創造性" percentage={50} />
           <SkillBar skill="革新性" percentage={50} />
           <SkillBar skill="チームワーク" percentage={90} />
@@ -25,21 +25,21 @@ const ResumePage = () => {
           <SkillBar skill="リーダーシップ" percentage={80} />
         </div>
         <br />
-        <div className="language-skills">
+        <div className={styles.languageSkills}>
           <TitleWithIcon icon={faComment} title={'語学'} />
           <LanguageSkill language="日本語" level={5} />
           <LanguageSkill language="英語" level={2} />
         </div>
       </div>
-      <div className="right-column">
-        <div className="work-summary">
+      <div className={styles.rightColumn}>
+        <div className={styles.workSummary}>
         <h1>職務略歴</h1>
           <p>大学在学中、学校の勉強だけでなく実践的な経験を積みたいと思い、iOSエンジニアとしてアルバイトを始めました。</p>
           <p>その後、就職活動では裁量の大きさや職場環境を重視して現在の会社に入社。</p>
           <p>入社後は、不正対策を施したアフィリエイトシステムの構築や、外部ASPとの連携、外部のギフト発券サービスの組み込みなど、幅広いプロダクトを新卒時からリードしてきました。</p>
           <p>現在は、チームリーダーとしてマネジメント業務を行いながら、プロジェクトマネージャー（PM）としてプロジェクトを指揮し、プレイヤーとして実務もこなしています。</p>
         </div>
-        <div className="work-details">
+        <div className={styles.workDetails}>
         <h1>職務詳細</h1>
           <WorkExperience 
             year="2016" 
