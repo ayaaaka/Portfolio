@@ -3,7 +3,7 @@
 @import "tailwindcss/utilities";
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Rubik+Scribble&family=Zen+Maru+Gothic&display=swap');
 
-@layer base {
+/* @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -42,7 +42,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
   }
-}
+} */
 
 .profile-titile {
   font-family: "Rubik Scribble", system-ui;
