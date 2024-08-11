@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 import { HobbyCard } from '../components/ui/HobbyCard';
 import { faGamepad, faFilm, faMusic, faTableTennis, faPersonSnowboarding, faCarCrash } from '@fortawesome/free-solid-svg-icons';
-import './global.css';
+import './globals.css';
 
 
 const ProfilePage = () => {
