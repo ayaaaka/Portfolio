@@ -94,6 +94,10 @@ export default function Component() {
                 <span>typescript</span>
                 <span>1年</span>
               </div>
+              <div className="flex justify-between">
+                <span>cakePHP</span>
+                <span>0.5年</span>
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -114,6 +118,64 @@ export default function Component() {
               <div className="flex justify-between">
                 <span>gitlab</span>
                 <span>6年</span>
+              </div>
+              <div className="flex justify-between">
+                <span>backlog</span>
+                <span>3年</span>
+              </div>
+              <div className="flex justify-between">
+                <span>trello</span>
+                <span>2年</span>
+              </div>
+              <div className="flex justify-between">
+                <span>redmine</span>
+                <span>2年</span>
+              </div>
+              <div className="flex justify-between">
+                <span>bitbucket</span>
+                <span>1年</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Google Search Console</span>
+                <span>1年</span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="w-full">
+          <CardHeader>
+            <CardTitle>ADNW</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-2">
+              <div className="flex justify-between">
+                <span>GAM</span>
+                <span>2年</span>
+              </div>
+              <div className="flex justify-between">
+                <span>GCP</span>
+                <span>2年</span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="w-full">
+          <CardHeader>
+            <CardTitle>Native</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-2">
+              <div className="flex justify-between">
+                <span>App Store Connect</span>
+                <span>5年</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Google Play Console</span>
+                <span>5年</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Firebase</span>
+                <span>5年</span>
               </div>
             </div>
           </CardContent>
