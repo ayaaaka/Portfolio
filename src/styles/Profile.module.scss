@@ -1,0 +1,12 @@
+
+.profileTitile {
+    font-family: "Bungee Shade", sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+}
+  

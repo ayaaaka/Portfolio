@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
+import Styles from '@/styles/Profile.module.scss'
 import { HobbyCard } from '@/components/ui/HobbyCard';
 import { faGamepad, faFilm, faMusic, faTableTennis, faPersonSnowboarding, faCarCrash } from '@fortawesome/free-solid-svg-icons';
 
@@ -18,7 +19,7 @@ const ProfilePage = () => {
           className="w-full object-cover"
         />
         <div className="absolute inset-0 flex justify-center items-center">
-          <h1 className="profile-titile">{`Welcome to Ayaka's Portfolio`}</h1>
+          <h1 className={Styles.profileTitile}>{`Welcome to Ayaka's Portfolio`}</h1>
         </div>
       </div>
 
