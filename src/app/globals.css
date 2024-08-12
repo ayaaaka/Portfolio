@@ -26,26 +26,11 @@
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
   }
-}
-
-@layer base {
-  * {
-    border-color: var(--border);
-  }
-
-  body {
-    background-color: var(--background);
-    color: var(--foreground);
-    font-family: var(--font-body);
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-  }
 } */
 
+
 .profile-titile {
-  font-family: "Rubik Scribble", system-ui;
+  font-family: "Bungee Shade", sans-serif;
   font-size: 60px;
   font-weight: bold;
   color: white;

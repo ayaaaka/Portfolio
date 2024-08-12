@@ -2,7 +2,6 @@ import React from 'react';
 
 const WorkExperience = ({ year, company, role, details }) => {
   return (
-    //TODO: styleで指定してるところどうにかしたい
     <div className="flex mb-10 work-experience" style={{marginTop: '40px'}}>
       <div className="flex-shrink-0 w-16 text-right pr-4">
         <span className="text-xl font-semibold">{year}</span>

@@ -5,13 +5,13 @@ export default function Component() {
   return (
     <div className="flex flex-col items-center p-4 space-y-14">
       <Navbar />
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 w-full max-w-7xl">
+      <div className="grid gap-4 md:grid-cols-2 w-full">
       <Card className="w-full">
           <CardHeader>
             <CardTitle>frontend</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-2">
+            <div className="space-y-4">
               <div className="flex justify-between">
                 <span>Next.js</span>
                 <span>1年</span>
@@ -92,27 +92,6 @@ export default function Component() {
               </div>
               <div className="flex justify-between">
                 <span>typescript</span>
-                <span>1年</span>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="w-full">
-          <CardHeader>
-            <CardTitle>DB</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-2">
-              <div className="flex justify-between">
-                <span>mysql</span>
-                <span>6年</span>
-              </div>
-              <div className="flex justify-between">
-                <span>oracle</span>
-                <span>3年</span>
-              </div>
-              <div className="flex justify-between">
-                <span>dynamo</span>
                 <span>1年</span>
               </div>
             </div>

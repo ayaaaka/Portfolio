@@ -32,14 +32,14 @@ const ResumePage = () => {
         </div>
       </div>
       <div className={styles.rightColumn}>
-        <div className={styles.workSummary}>
-        <h1>職務略歴</h1>
+        <div className="mb-4">
+          <h1>職務略歴</h1>
           <p>大学在学中、学校の勉強だけでなく実践的な経験を積みたいと思い、iOSエンジニアとしてアルバイトを始めました。</p>
           <p>その後、就職活動では裁量の大きさや職場環境を重視して現在の会社に入社。</p>
           <p>入社後は、不正対策を施したアフィリエイトシステムの構築や、外部ASPとの連携、外部のギフト発券サービスの組み込みなど、幅広いプロダクトを新卒時からリードしてきました。</p>
           <p>現在は、チームリーダーとしてマネジメント業務を行いながら、プロジェクトマネージャー（PM）としてプロジェクトを指揮し、プレイヤーとして実務もこなしています。</p>
         </div>
-        <div className={styles.workDetails}>
+        <div className="margin-5">
         <h1>職務詳細</h1>
           <WorkExperience 
             year="2016" 
