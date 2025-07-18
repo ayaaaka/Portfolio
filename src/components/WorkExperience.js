@@ -1,6 +1,7 @@
 import React from 'react';
+import Link from 'next/link';
 
-const WorkExperience = ({ year, company, role, details }) => {
+const WorkExperience = ({ year, company, role, details, link }) => {
   return (
     <div className="flex mb-10 work-experience" style={{marginTop: '40px'}}>
       <div className="flex-shrink-0 w-16 text-right pr-4">
@@ -21,7 +22,13 @@ const WorkExperience = ({ year, company, role, details }) => {
       ></span>
       <div className="flex-grow border-l-2 border-gray-300 pl-4 relative">
         <div className="mb-2">
-          <span className="block font-semibold">{company}</span>
+          {link ? (
+            <Link href={link} className="block font-semibold hover:text-blue-600 transition-colors cursor-pointer">
+              {company}
+            </Link>
+          ) : (
+            <span className="block font-semibold">{company}</span>
+          )}
         </div>
         <span className="block">{role}</span>
         <ul className="list-disc list-inside">

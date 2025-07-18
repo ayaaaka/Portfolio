@@ -71,6 +71,7 @@ const ResumePage = () => {
               company="株式会社 CARTA HOLDINGS" 
               role="フルスタックエンジニア 正社員" 
               details={["自社開発", "ポイントサイトの企画・設計・開発・保守", "プロダクトマネージャー"]} 
+              link="/resume/carta"
             />
           </div>
         </div>
