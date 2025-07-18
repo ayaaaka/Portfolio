@@ -22,13 +22,7 @@ const WorkExperience = ({ year, company, role, details, link }) => {
       ></span>
       <div className="flex-grow border-l-2 border-gray-300 pl-4 relative">
         <div className="mb-2">
-          {link ? (
-            <Link href={link} className="block font-semibold hover:text-blue-600 transition-colors cursor-pointer">
-              {company}
-            </Link>
-          ) : (
-            <span className="block font-semibold">{company}</span>
-          )}
+          <span className="block font-semibold">{company}</span>
         </div>
         <span className="block">{role}</span>
         <ul className="list-disc list-inside">
@@ -36,6 +30,13 @@ const WorkExperience = ({ year, company, role, details, link }) => {
             <li key={index}>{detail}</li>
           ))}
         </ul>
+        {link && (
+          <div className="mt-3">
+            <Link href={link} className="text-blue-600 hover:text-blue-800 underline text-sm">
+              業務詳細をもっと見る →
+            </Link>
+          </div>
+        )}
       </div>
       <div className="absolute -left-8 top-0 h-full flex items-center justify-center">
       <span className="w-4 h-4 bg-black rounded-full border border-black"></span>

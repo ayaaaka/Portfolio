@@ -47,30 +47,20 @@ const ResumePage = () => {
               company="株式会社 Gods" 
               role="iOSエンジニア アルバイト" 
               details={["受託開発", "某ジムの受付アプリ"]} 
+              link={undefined}
             />
             <WorkExperience 
               year="2017" 
               company="株式会社 CANDLE" 
               role="iOSエンジニア アルバイト" 
               details={["自社開発", "女性向けアプリの改修・保守"]} 
-            />
-            <WorkExperience 
-              year="2018" 
-              company="株式会社 VOYAGE GROUP" 
-              role="webエンジニア アルバイト" 
-              details={["自社開発", "ポイントサイトの設計・開発・保守"]} 
+              link={undefined}
             />
             <WorkExperience 
               year="2019" 
-              company="株式会社 VOYAGE GROUP" 
-              role="webエンジニア 正社員 新卒入社" 
-              details={["自社開発", "ポイントサイトの設計・開発・保守"]} 
-            />
-            <WorkExperience 
-              year="2025" 
-              company="株式会社 CARTA HOLDINGS" 
-              role="フルスタックエンジニア 正社員" 
-              details={["自社開発", "ポイントサイトの企画・設計・開発・保守", "プロダクトマネージャー"]} 
+              company="株式会社 VOYAGE GROUP → 株式会社 CARTA HOLDINGS" 
+              role="フルスタックエンジニア 正社員 新卒入社" 
+              details={["自社開発", "ポイントサイトの設計・開発・保守", "プロダクトマネージャー"]} 
               link="/resume/carta"
             />
           </div>
