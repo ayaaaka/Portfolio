@@ -31,7 +31,7 @@ export default function Component() {
             <div className="space-y-2">
               <div className="flex justify-between">
                 <span>php</span>
-                <span>6年</span>
+                <span>7年</span>
               </div>
               <div className="flex justify-between">
                 <span>ruby</span>
@@ -63,7 +63,7 @@ export default function Component() {
             <div className="space-y-2">
               <div className="flex justify-between">
                 <span>mysql</span>
-                <span>6年</span>
+                <span>7年</span>
               </div>
               <div className="flex justify-between">
                 <span>oracle</span>
@@ -109,11 +109,11 @@ export default function Component() {
             <div className="space-y-2">
               <div className="flex justify-between">
                 <span>git</span>
-                <span>9年</span>
+                <span>10年</span>
               </div>
               <div className="flex justify-between">
                 <span>github</span>
-                <span>9年</span>
+                <span>10年</span>
               </div>
               <div className="flex justify-between">
                 <span>gitlab</span>

@@ -67,7 +67,7 @@ const ResumePage = () => {
               details={["自社開発", "ポイントサイトの設計・開発・保守"]} 
             />
             <WorkExperience 
-              year="2022" 
+              year="2025" 
               company="株式会社 CARTA HOLDINGS" 
               role="フルスタックエンジニア 正社員" 
               details={["自社開発", "ポイントサイトの企画・設計・開発・保守", "プロダクトマネージャー"]} 
