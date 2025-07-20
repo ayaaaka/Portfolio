@@ -447,7 +447,7 @@ const ProjectDetailPage = ({ params }: { params: { id: string } }) => {
       "API連携": "from-indigo-500 to-indigo-600",
       "システム構築": "from-red-500 to-red-600",
       "AWS・連携": "from-yellow-500 to-yellow-600",
-      "システム連携": "from-teal-500 to-teal-600"
+      "API連携・システム設計": "from-teal-500 to-teal-600"
     };
     return colors[category] || "from-gray-500 to-gray-600";
   };
@@ -461,7 +461,7 @@ const ProjectDetailPage = ({ params }: { params: { id: string } }) => {
       "API連携": "text-indigo-700",
       "システム構築": "text-red-700",
       "AWS・連携": "text-yellow-700",
-      "システム連携": "text-teal-700"
+      "API連携・システム設計": "text-teal-700"
     };
     return colors[category] || "text-gray-700";
   };
