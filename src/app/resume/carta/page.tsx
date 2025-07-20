@@ -129,11 +129,11 @@ const CartaProjectsPage = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 space-y-14">
+    <div className="container mx-auto px-4 py-4 space-y-8">
       <Navbar />
       
       {/* パンくずリスト */}
-      <nav className="flex mb-8" aria-label="Breadcrumb">
+      <nav className="flex mb-6" aria-label="Breadcrumb">
         <ol className="inline-flex items-center space-x-1 md:space-x-3">
           <li className="inline-flex items-center">
             <Link href="/resume" className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600">
@@ -155,42 +155,47 @@ const CartaProjectsPage = () => {
       </nav>
 
       {/* ヘッダー */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-4">株式会社 CARTA HOLDINGS</h1>
-        <p className="text-gray-600 mb-2">フルスタックエンジニア 正社員</p>
-        <p className="text-gray-600">2019年 - 現在</p>
-        <p className="text-gray-600 mt-4">
-          自社開発のポイントサイトの企画・設計・開発・保守を担当し、フルサイクルエンジニアとして活動。<br />
-          幅広いプロダクトを新卒時からリードし、チームリーダーとしてマネジメント業務を行った経験もあります。<br />
-          現在はプロジェクトマネージャー（PM）としてプロジェクトを指揮し、プレイヤーとして実務もこなしています。<br />
+      <div className="mb-6">
+        <h1 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">株式会社 CARTA HOLDINGS</h1>
+        <p className="text-gray-600 mb-1 md:mb-2">フルスタックエンジニア 正社員</p>
+        <p className="text-gray-600 mb-3 md:mb-4">2019年 - 現在</p>
+        <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+          自社開発のポイントサイトの企画・設計・開発・保守を担当し、フルサイクルエンジニアとして活動。<br className="hidden md:block" />
+          幅広いプロダクトを新卒時からリードし、チームリーダーとしてマネジメント業務を行った経験もあります。<br className="hidden md:block" />
+          現在はプロジェクトマネージャー（PM）としてプロジェクトを指揮し、プレイヤーとして実務もこなしています。
         </p>
       </div>
 
       {/* プロジェクト一覧 */}
       <div className="space-y-4">
         {projects.slice().reverse().map((project) => (
-          <div key={project.id} className={`border-l-4 ${getCategoryColor(project.category)} p-4 rounded-r-lg`}>
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="text-lg font-semibold">{project.title}</h3>
-              <span className="text-sm text-gray-500">{project.period}</span>
+          <div key={project.id} className={`border-l-4 ${getCategoryColor(project.category)} p-3 md:p-4 rounded-r-lg`}>
+            {/* タイトルと期間 */}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 md:mb-3">
+              <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-0">{project.title}</h3>
+              <span className="text-xs md:text-sm text-gray-500">{project.period}</span>
             </div>
-            <p className="text-gray-600 mb-2">{project.description}</p>
-            <div className="flex items-center justify-between">
-              <div className="flex gap-2">
-                {project.skills.map((skill, index) => (
-                  <span key={index} className="bg-white text-gray-800 text-xs px-2 py-1 rounded border">
-                    {skill}
-                  </span>
-                ))}
+            
+            {/* 説明 */}
+            <p className="text-gray-600 text-sm md:text-base mb-3 md:mb-4 leading-relaxed">{project.description}</p>
+            
+            {/* スキルタグ */}
+            <div className="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
+              {project.skills.map((skill, index) => (
+                <span key={index} className="bg-white text-gray-800 text-xs px-2 py-1 rounded border whitespace-nowrap">
+                  {skill}
+                </span>
+              ))}
+            </div>
+            
+            {/* チーム情報と詳細リンク */}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-0">
+              <div className="text-xs md:text-sm text-gray-500">
+                チーム: {project.teamSize} | 役割: {project.role}
               </div>
-              <div className="text-right">
-                <div className="text-xs text-gray-500 mb-1">
-                  チーム: {project.teamSize} | 役割: {project.role}
-                </div>
-                <Link href={`/resume/carta/${project.id}`} className={`text-sm font-medium ${getCategoryTextColor(project.category)} ${getCategoryHoverColor(project.category)} transition-colors`}>
-                  詳細を見る →
-                </Link>
-              </div>
+              <Link href={`/resume/carta/${project.id}`} className={`text-sm font-medium ${getCategoryTextColor(project.category)} ${getCategoryHoverColor(project.category)} transition-colors self-start md:self-auto`}>
+                詳細を見る →
+              </Link>
             </div>
           </div>
         ))}
