@@ -9,9 +9,9 @@ const CartaProjectsPage = () => {
       title: "メディアとの連携掲載",
       period: "2019年7月 - 2019年9月",
       category: "API連携・システム設計",
-      description: "ゴシップガールズトークとECナビのAPI連携を実装し、AFFITを使わないリアルタイムポイント付与システムを構築。タスクアラートでの掲載によりCV数を約30倍に向上させ、売上も約30倍に増加。",
+      description: "ゴシップガールズトークとECナビのAPI連携を実装し、リアルタイムポイント付与システムを構築。バッチ通知での掲載によりCV数を約30倍に向上させ、売上も約30倍に増加。",
       skills: ["PHP", "MySQL", "Linux/UNIX", "AWS", "Redshift", "API Gateway", "Cloudwatch", "Datadog"],
-      teamSize: "4名（ECナビ3名、fluct1名）",
+      teamSize: "1名",
       role: "設計・開発・連携調整"
     },
     {
@@ -20,8 +20,8 @@ const CartaProjectsPage = () => {
       period: "2019年12月 - 2020年1月",
       category: "AWS・連携",
       description: "ECナビのCS対応用Backlogで課題の追加や更新・とりこぼしに気付きづらい問題を解決するため、BacklogのイベントをSlack通知させるシステムを新規開発。Lambdaとバッチ処理を組み合わせた独立したシステムを構築。",
-      skills: ["Go", "MySQL", "Linux/UNIX", "Lambda", "API Gateway", "Cloudwatch", "PHP", "AWS", "Slack API"],
-      teamSize: "2名",
+      skills: ["Go", "MySQL", "Linux/UNIX", "Lambda", "API Gateway", "Cloudwatch", "PHP", "AWS", "Slack API", "Backlog Webhook API"],
+      teamSize: "1名",
       role: "設計・開発"
     },
     {
@@ -29,9 +29,9 @@ const CartaProjectsPage = () => {
       title: "新規アフィリエイトシステムの設計〜構築",
       period: "2020年2月 - 2020年6月",
       category: "システム構築",
-      description: "ECナビの定額アフィリエイトにおける不正CVポイント付与対策システムを設計・構築。トラッキングキー発行&DB保存方式による不正対策を実装し、現在2つのASPで運用中。",
+      description: "ECナビの定額アフィリエイトにおける不正CVポイント付与対策システムを設計・構築。トラッキングキー発行&DB保存方式による不正対策を実装し、現在多数のASPで運用中。",
       skills: ["PHP7.3", "JavaScript", "SQL", "HTML", "CSS", "MySQL", "Linux/UNIX", "自社FW", "Redshift", "ETL"],
-      teamSize: "約2名",
+      teamSize: "1名",
       role: "設計・開発・効果測定・保守"
     },
     {
@@ -39,9 +39,9 @@ const CartaProjectsPage = () => {
       title: "ギフト券発券APIを叩き、サービス内でギフト発券を可能に",
       period: "2020年11月 - 2021年2月",
       category: "API連携",
-      description: "Gods、DigicoのAPIを活用してギフト券を人を介さずにユーザーに渡せるシステムを構築。友達紹介やポイント懸賞での手作業によるギフト券配布を自動化した。",
+      description: "ギフトオンデマンドのAPIを活用してギフト券を人を介さずにユーザーに渡せるシステムを構築。友達紹介やポイント懸賞での手作業によるギフト券配布を自動化した。",
       skills: ["PHP7.3", "JavaScript", "SQL", "HTML", "CSS", "MySQL", "Linux/UNIX", "自社FW", "外部API連携", "SES"],
-      teamSize: "3名",
+      teamSize: "1名",
       role: "設計・開発・運用"
     },
     {
@@ -49,9 +49,9 @@ const CartaProjectsPage = () => {
       title: "自社のアプリへの機能追加",
       period: "2022年7月 - 2022年9月",
       category: "モバイル開発",
-      description: "Apple審査で指摘されたアカウント削除機能とSign in with Appleでの氏名入力補完機能を実装し、審査を無事パスさせた。",
+      description: "Apple審査で指摘されたアカウント削除機能とSign in with Appleでの氏名入力補完機能を実装し、無事アプリリリースに漕ぎ着けた。",
       skills: ["Swift", "AppTrackingTransparency", "AuthenticationServices", "Sign in with Apple JS", "Firebase", "iOS開発"],
-      teamSize: "2名",
+      teamSize: "1名",
       role: "設計・開発・Apple交渉"
     },
     {
@@ -61,7 +61,7 @@ const CartaProjectsPage = () => {
       category: "企画・開発",
       description: "コンテンツの企画から携わり、設計から開発まですべてを担当。ユーザの訪問訴求コンテンツを何かしら作りたいという要望から、要件を決めていきリリースまで持っていった。",
       skills: ["PHP7.3", "JavaScript", "SQL", "HTML", "CSS", "MySQL", "Linux/UNIX", "自社FW"],
-      teamSize: "3名",
+      teamSize: "2名",
       role: "企画・設計・開発"
     },
     {
