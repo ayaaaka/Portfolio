@@ -83,6 +83,16 @@ const CartaProjectsPage = () => {
       skills: ["PHP7.3", "JavaScript", "SQL", "HTML", "CSS", "MySQL", "Linux/UNIX", "自社FW"],
       teamSize: "2名",
       role: "計画・設計・実装"
+    },
+    {
+      id: 9,
+      title: "新規ユーザー流入システムを0から作り変えた話",
+      period: "2024年4月 - 2025年1月",
+      category: "システム構築",
+      description: "10年近く前に作られたレガシーな新規ユーザー流入システムを丸ごと作り変え、運用に沿った管理しやすい体系を整備。Transaction概念の導入、GTM活用によるタグ連携の効率化、管理画面のUI/UX改善により、運用負荷を大幅に削減し、トラッキング精度を向上させた。",
+      skills: ["PHP7.3", "JavaScript", "SQL", "HTML", "CSS", "MySQL", "Linux/UNIX", "自社FW", "GTM", "AWS", "Redash"],
+      teamSize: "4名",
+      role: "プロジェクトマネージャー・設計・開発・ディレクション"
     }
   ];
 
