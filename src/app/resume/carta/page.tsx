@@ -81,7 +81,7 @@ const CartaProjectsPage = () => {
       category: "システム改善",
       description: "外部連携との繋ぎ込みシステムの現状調査とビジネスサイドと協業して管理画面の設計。今まで連携の度にエンジニアコストがかかっていたのを0にし、ビジネスサイドのみで完結できるようにした。",
       skills: ["PHP7.3", "JavaScript", "SQL", "HTML", "CSS", "MySQL", "Linux/UNIX", "自社FW"],
-      teamSize: "2名",
+      teamSize: "1名",
       role: "計画・設計・実装"
     },
     {

@@ -77,7 +77,7 @@ const ProjectDetailPage = ({ params }: { params: { id: string } }) => {
       category: "AWS・連携",
       description: "ECナビのCS対応用Backlogで課題の追加や更新・とりこぼしに気付きづらい問題を解決するため、BacklogのイベントをSlack通知させるシステムを新規開発。Lambdaとバッチ処理を組み合わせた独立したシステムを構築。",
       skills: ["Go", "MySQL", "Linux/UNIX", "Lambda", "API Gateway", "Cloudwatch", "PHP", "AWS", "Slack API"],
-      teamSize: "2名",
+      teamSize: "1名",
       role: "設計・開発",
       background: "ECナビではCSを外注しており、やり取りをBacklogで行っている。従来の運用では、業務委託先担当者が社内担当者を指定してBacklogに起票しても通知はどこにも来ず、各課題担当者は担当になった課題があるかを確認しに行く必要があった。課題の起票ペースは日によって数回〜数日に1回と幅があり、対応状況や更新の通知が来なかったため、都度アクセスして確認するしか方法がなかった。",
       challenges: [
@@ -169,7 +169,7 @@ const ProjectDetailPage = ({ params }: { params: { id: string } }) => {
       category: "API連携",
       description: "ギフトオンデマンドのAPIを活用してギフト券を人を介さずにユーザーに渡せるシステムを構築。友達紹介やポイント懸賞での手作業によるギフト券配布を自動化した。",
       skills: ["PHP7.3", "JavaScript", "SQL", "HTML", "CSS", "MySQL", "Linux/UNIX", "自社FW", "外部API連携", "SES"],
-      teamSize: "3名",
+      teamSize: "1名",
       role: "設計・開発・運用",
       background: "従来、友達紹介やポイント懸賞でのギフト券配布は手作業で行われており、Amazon券を発行→ダウンロード→CSVに貼り付け→メール配信という流れだった。この手作業はセキュリティ的にも運用的にも適切ではなく、誤操作で不要なギフト券を発券してしまう可能性や、悪意を持った運用者がギフトコードを利用する可能性があった。",
       challenges: [
@@ -216,7 +216,7 @@ const ProjectDetailPage = ({ params }: { params: { id: string } }) => {
       category: "モバイル開発",
       description: "Apple審査で指摘されたアカウント削除機能とSign in with Appleでの氏名入力補完機能を実装し、無事アプリリリースに漕ぎ着けた。",
       skills: ["Swift", "AppTrackingTransparency", "AuthenticationServices", "Sign in with Apple JS", "Firebase", "iOS開発"],
-      teamSize: "2名",
+      teamSize: "1名",
       role: "設計・開発・Apple交渉",
       background: "定期的に行っているアプリのパッケージアップデートを行う際に、Appleの審査で落ちてしまった。新規で開発を行っていないアプリで審査が落ちた為、チームが解散し知見がある人がいない&開発全く何もわからないという状況で、審査で指摘されていることについて調査・対応をする運びとなった。",
       challenges: [
@@ -332,7 +332,7 @@ const ProjectDetailPage = ({ params }: { params: { id: string } }) => {
       category: "システム改善",
       description: "外部連携との繋ぎ込みシステムの現状調査とビジネスサイドと協業して管理画面の設計。今まで連携の度にエンジニアコストがかかっていたのを0にし、ビジネスサイドのみで完結できるようにした。",
       skills: ["PHP7.3", "JavaScript", "SQL", "HTML", "CSS", "MySQL", "Linux/UNIX", "自社FW"],
-      teamSize: "2名",
+      teamSize: "1名",
       role: "計画・設計・実装",
       background: "広告出稿における外部連携先との繋ぎ込み作業は、従来エンジニアが都度対応していたため、エンジニアコストが高く、ビジネスサイドの迅速な対応が困難だった。また、連携先ごとに異なる設定方法があり、統一された管理方法がなかった。",
       challenges: [
