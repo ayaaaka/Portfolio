@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 
@@ -31,9 +32,33 @@ const WorkExperience = ({ year, company, role, details, link }) => {
           ))}
         </ul>
         {link && (
-          <div className="mt-3">
-            <Link href={link} className="text-blue-600 hover:text-blue-800 underline text-sm">
-              業務詳細をもっと見る →
+          <div style={{ marginTop: '20px' }}>
+            <Link 
+              href={link} 
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                padding: '10px 20px',
+                backgroundColor: '#2563eb',
+                color: 'white',
+                fontWeight: '600',
+                borderRadius: '8px',
+                textDecoration: 'none',
+                fontSize: '16px',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                transition: 'all 0.2s',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#1d4ed8';
+                e.currentTarget.style.boxShadow = '0 4px 6px rgba(0,0,0,0.15)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#2563eb';
+                e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+              }}
+            >
+              業務詳細をもっと見る
+              <span style={{ marginLeft: '8px', fontSize: '18px' }}>→</span>
             </Link>
           </div>
         )}
