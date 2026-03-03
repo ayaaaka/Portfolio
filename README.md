@@ -86,7 +86,9 @@ npm run lint   # ESLint チェック
 
 ## デプロイ
 
-[Vercel](https://vercel.com/) を推奨（Next.js 公式ホスティング）。
+[AWS Amplify](https://aws.amazon.com/amplify/) を使用。  
+AWSコンソール上で GitHub リポジトリと連携済み。  
+`main` ブランチへのマージで自動デプロイされる。
 
 ## 関連ドキュメント
 

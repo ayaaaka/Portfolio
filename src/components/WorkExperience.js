@@ -66,9 +66,6 @@ const WorkExperience = ({ year, company, role, details, link }) => {
           </div>
         )}
       </div>
-      <div className="absolute -left-8 top-0 h-full flex items-center justify-center">
-      <span className="w-4 h-4 bg-black rounded-full border border-black"></span>
-    </div>
     </div>
   );
 };
