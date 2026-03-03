@@ -53,6 +53,7 @@ const ResumePage = () => {
             <WorkExperience
               year="2017"
               company="株式会社 CANDLE"
+
               role="iOSエンジニア アルバイト"
               details={["自社開発", "女性向けアプリの改修・保守"]}
               link={undefined}
@@ -60,8 +61,14 @@ const ResumePage = () => {
             <WorkExperience
               year="2019"
               company="株式会社 VOYAGE GROUP → 株式会社 CARTA HOLDINGS"
-              role="フルスタックエンジニア 正社員 新卒入社"
-              details={["自社開発", "ポイントサイトの設計・開発・保守", "プロダクトマネージャー"]}
+              role="正社員　新卒入社"
+              details={["自社開発", "フルスタックエンジニア", "フルサイクルエンジニア"]}
+              departments={[
+                { period: "2019/04 〜 2023/01", name: "株式会社DIGITALIO メディア事業本部" },
+                { period: "2023/02 〜 2025/10", name: "株式会社DIGITALIO Tech Unit" },
+                { period: "2025/11 〜 現在",    name: "株式会社CARTA ZERO プロダクト管轄 開発局" },
+              ]}
+              departmentsLabel="所属部署・会社の変遷"
               link="/resume/carta"
             />
           </div>
