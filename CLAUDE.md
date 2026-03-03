@@ -1,6 +1,6 @@
 # ayaaaka-portfolio
 
-Ayaka Kobayashi のポートフォリオサイト。
+Ayaka Kobayashi のポートフォリオサイト。  
 プロフィール・職務経歴・スキルを紹介する静的コンテンツサイト。
 
 ## 🗂️ プロジェクト構造

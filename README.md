@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ayaaaka-portfolio
 
-## Getting Started
+Ayaka Kobayashi のポートフォリオサイト。  
+プロフィール・職務経歴・スキルを紹介する静的コンテンツサイト。
 
-First, run the development server:
+## ディレクトリ構造
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+ayaaaka-portfolio/
+├── public/
+│   └── img/
+│       ├── profile/fire-flower.png   ← プロフィール背景画像
+│       └── resume/bear.png           ← レジュメ用写真
+├── src/
+│   ├── app/                          ← ページ (Next.js App Router)
+│   │   ├── layout.tsx                ← ルートレイアウト
+│   │   ├── globals.css               ← グローバルスタイル・フォント
+│   │   ├── profile/page.tsx          ← プロフィール・趣味ページ
+│   │   ├── resume/page.tsx           ← 職務経歴ページ
+│   │   ├── resume/carta/page.tsx     ← CARTAプロジェクト一覧
+│   │   ├── resume/carta/[id]/page.tsx← プロジェクト詳細（動的ルート）
+│   │   └── skill/page.tsx            ← スキル一覧ページ
+│   ├── components/                   ← 共有コンポーネント
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   ├── PersonalInfo.js
+│   │   ├── WorkExperience.js
+│   │   ├── SkillBar.js
+│   │   ├── LanguageSkill.js
+│   │   ├── TitleWithIcon.js
+│   │   └── ui/                       ← shadcn/ui コンポーネント
+│   ├── styles/                       ← SCSS Modules
+│   └── lib/utils.ts                  ← cn() ユーティリティ
+├── CLAUDE.md                         ← AIコーディング指示書
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ページ構成
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| ページ | URL | ファイル | 説明 |
+|-------|-----|---------|------|
+| プロフィール | `/profile` | `src/app/profile/page.tsx` | 自己紹介・趣味カード |
+| 職務経歴 | `/resume` | `src/app/resume/page.tsx` | 2カラムのレジュメ |
+| スキル | `/skill` | `src/app/skill/page.tsx` | スキルカテゴリ一覧 |
+| CARTAプロジェクト一覧 | `/resume/carta` | `src/app/resume/carta/page.tsx` | 担当プロジェクト一覧 |
+| プロジェクト詳細 | `/resume/carta/[id]` | `src/app/resume/carta/[id]/page.tsx` | プロジェクト詳細 |
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 技術スタック
 
-## Learn More
+| カテゴリ | 技術 | 用途 |
+|---------|------|------|
+| フレームワーク | Next.js 14.2.5 (App Router) | ページルーティング・SSR |
+| UI | React 18, TypeScript 5 | コンポーネント構築 |
+| スタイリング | Tailwind CSS 3.4 | レイアウト・ユーティリティ |
+| スタイリング | SCSS Modules (Sass) | 既存コンポーネントのスタイル |
+| UIコンポーネント | shadcn/ui, Radix UI | Card, Button 等 |
+| アイコン | FontAwesome 6, Lucide React | アイコン表示 |
+| フォント | Zen Maru Gothic, Bungee Shade | Google Fonts |
 
-To learn more about Next.js, take a look at the following resources:
+## 開発コマンド
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run dev    # 開発サーバー起動 (http://localhost:3000)
+npm run build  # 本番ビルド
+npm run start  # 本番サーバー起動
+npm run lint   # ESLint チェック
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## コンテンツ更新
 
-## Deploy on Vercel
+**データはすべてコンポーネント内にハードコード。DB・外部API なし。**   
+更新時は以下のファイルを直接編集する。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| コンテンツ | 更新ファイル |
+|-----------|------------|
+| 趣味カード | `src/app/profile/page.tsx` |
+| 個人情報（名前・連絡先） | `src/components/PersonalInfo.js` |
+| パーソナルスキル・語学スキル | `src/app/resume/page.tsx` |
+| 職務経歴 | `src/app/resume/page.tsx` |
+| スキル一覧 | `src/app/skill/page.tsx` |
+| CARTAプロジェクト | `src/app/resume/carta/page.tsx`, `src/app/resume/carta/[id]/page.tsx` |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## デプロイ
+
+[Vercel](https://vercel.com/) を推奨（Next.js 公式ホスティング）。
+
+## 関連ドキュメント
+
+- [CLAUDE.md](CLAUDE.md) - AIコーディング指示書（開発ガイドライン）
