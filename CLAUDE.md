@@ -9,10 +9,11 @@ Ayaka Kobayashi のポートフォリオサイト。
 src/
 ├── app/                        # ページ (Next.js App Router)
 │   ├── layout.tsx              # ルートレイアウト
-│   ├── page.tsx                # / → /profile にリダイレクト
+│   ├── page.tsx                # / → レジュメページ本体
 │   ├── globals.css             # グローバルスタイル・フォント定義
-│   ├── profile/page.tsx        # プロフィール・趣味ページ
-│   ├── resume/page.tsx         # 職務経歴ページ（2カラム）
+│   ├── resume/page.tsx         # /resume → / へリダイレクト
+│   ├── aboutme/page.tsx        # About Me・趣味ページ
+│   ├── profile/page.tsx        # /profile → /aboutme へリダイレクト
 │   ├── resume/carta/page.tsx   # CARTA社での中から大規模のプロジェクト一覧
 │   ├── resume/carta/[id]/page.tsx  # プロジェクト詳細（動的ルート）
 │   └── skill/page.tsx          # スキル一覧ページ
@@ -68,11 +69,11 @@ npm run lint   # ESLint チェック
 
 | コンテンツ | 更新ファイル |
 |-----------|------------|
-| 趣味カード（タイトル・説明・リンク） | `src/app/profile/page.tsx` |
+| 趣味カード（タイトル・説明・リンク） | `src/app/aboutme/page.tsx` |
 | 個人情報（名前・生年月日・住所・メール） | `src/components/PersonalInfo.js` |
-| パーソナルスキル（スキルバー） | `src/app/resume/page.tsx` |
-| 語学スキル（ドット評価） | `src/app/resume/page.tsx` |
-| 職務経歴（会社・期間・担当） | `src/app/resume/page.tsx`（WorkExperience への props） |
+| パーソナルスキル（スキルバー） | `src/app/page.tsx` |
+| 語学スキル（ドット評価） | `src/app/page.tsx` |
+| 職務経歴（会社・期間・担当） | `src/app/page.tsx`（WorkExperience への props） |
 | スキル一覧（カテゴリ・年数） | `src/app/skill/page.tsx` |
 | CARTAプロジェクト一覧 | `src/app/resume/carta/page.tsx` |
 | CARTAプロジェクト詳細 | `src/app/resume/carta/[id]/page.tsx` |

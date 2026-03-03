@@ -15,8 +15,10 @@ ayaaaka-portfolio/
 │   ├── app/                          ← ページ (Next.js App Router)
 │   │   ├── layout.tsx                ← ルートレイアウト
 │   │   ├── globals.css               ← グローバルスタイル・フォント
-│   │   ├── profile/page.tsx          ← プロフィール・趣味ページ
-│   │   ├── resume/page.tsx           ← 職務経歴ページ
+│   │   ├── page.tsx                  ← / レジュメページ本体
+│   │   ├── resume/page.tsx           ← /resume → / へリダイレクト
+│   │   ├── aboutme/page.tsx          ← /aboutme About Me・趣味ページ
+│   │   ├── profile/page.tsx          ← /profile → /aboutme へリダイレクト
 │   │   ├── resume/carta/page.tsx     ← CARTAプロジェクト一覧
 │   │   ├── resume/carta/[id]/page.tsx← プロジェクト詳細（動的ルート）
 │   │   └── skill/page.tsx            ← スキル一覧ページ
@@ -39,11 +41,13 @@ ayaaaka-portfolio/
 
 | ページ | URL | ファイル | 説明 |
 |-------|-----|---------|------|
-| プロフィール | `/profile` | `src/app/profile/page.tsx` | 自己紹介・趣味カード |
-| 職務経歴 | `/resume` | `src/app/resume/page.tsx` | 2カラムのレジュメ |
+| 職務経歴 | `/` | `src/app/page.tsx` | 2カラムのレジュメ（トップ） |
+| About Me | `/aboutme` | `src/app/aboutme/page.tsx` | 自己紹介・趣味カード |
 | スキル | `/skill` | `src/app/skill/page.tsx` | スキルカテゴリ一覧 |
 | CARTAプロジェクト一覧 | `/resume/carta` | `src/app/resume/carta/page.tsx` | 担当プロジェクト一覧 |
 | プロジェクト詳細 | `/resume/carta/[id]` | `src/app/resume/carta/[id]/page.tsx` | プロジェクト詳細 |
+| （旧URL） | `/resume` | → `/` へリダイレクト | |
+| （旧URL） | `/profile` | → `/aboutme` へリダイレクト | |
 
 ## 技術スタック
 
@@ -73,10 +77,10 @@ npm run lint   # ESLint チェック
 
 | コンテンツ | 更新ファイル |
 |-----------|------------|
-| 趣味カード | `src/app/profile/page.tsx` |
+| 趣味カード | `src/app/aboutme/page.tsx` |
 | 個人情報（名前・連絡先） | `src/components/PersonalInfo.js` |
-| パーソナルスキル・語学スキル | `src/app/resume/page.tsx` |
-| 職務経歴 | `src/app/resume/page.tsx` |
+| パーソナルスキル・語学スキル | `src/app/page.tsx` |
+| 職務経歴 | `src/app/page.tsx` |
 | スキル一覧 | `src/app/skill/page.tsx` |
 | CARTAプロジェクト | `src/app/resume/carta/page.tsx`, `src/app/resume/carta/[id]/page.tsx` |
 
