@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const WorkExperience = ({ year, company, role, details, departments, departmentsLabel, link }) => {
+const WorkExperience = ({ year, company, role, details, departments = null, departmentsLabel = null, link = null }) => {
   return (
     <div className="flex mb-10 work-experience" style={{marginTop: '40px'}}>
       <div className="flex-shrink-0 w-16 text-right pr-4">
