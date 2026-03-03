@@ -2,6 +2,17 @@
 import React from 'react';
 import Link from 'next/link';
 
+/**
+ * @param {{
+ *   year: string,
+ *   company: string,
+ *   role: string,
+ *   details: string[],
+ *   departments?: {period: string, name: string}[],
+ *   departmentsLabel?: string,
+ *   link?: string
+ * }} props
+ */
 const WorkExperience = ({ year, company, role, details, departments, departmentsLabel, link }) => {
   return (
     <div className="flex mb-10 work-experience" style={{marginTop: '40px'}}>

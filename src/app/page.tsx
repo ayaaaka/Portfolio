@@ -53,7 +53,6 @@ const ResumePage = () => {
             <WorkExperience
               year="2017"
               company="株式会社 CANDLE"
-
               role="iOSエンジニア アルバイト"
               details={["自社開発", "女性向けアプリの改修・保守"]}
               link={undefined}
