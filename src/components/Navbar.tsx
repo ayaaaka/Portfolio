@@ -7,10 +7,10 @@ const Navbar = () => {
     <nav className={styles.nav}>
       <ul>
         <li>
-          <Link href="/">Profile</Link>
+          <Link href="/">Resume</Link>
         </li>
         <li>
-          <Link href="/resume">Resume</Link>
+          <Link href="/aboutme">About Me</Link>
         </li>
         <li>
           <Link href="/skill">Skill</Link>
