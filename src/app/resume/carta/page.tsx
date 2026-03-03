@@ -167,13 +167,55 @@ const CartaProjectsPage = () => {
       {/* ヘッダー */}
       <div className="mb-6">
         <h1 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">株式会社 CARTA HOLDINGS</h1>
-        <p className="text-gray-600 mb-1 md:mb-2">フルスタックエンジニア 正社員</p>
+        <p className="text-gray-600 mb-1 md:mb-2">フルスタック/フルサイクルエンジニア 正社員</p>
         <p className="text-gray-600 mb-3 md:mb-4">2019年 - 現在</p>
-        <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-          自社開発のポイントサイトの企画・設計・開発・保守を担当し、フルサイクルエンジニアとして活動。<br className="hidden md:block" />
-          幅広いプロダクトを新卒時からリードし、チームリーダーとしてマネジメント業務を行った経験もあります。<br className="hidden md:block" />
-          現在はプロジェクトマネージャー（PM）としてプロジェクトを指揮し、プレイヤーとして実務もこなしています。
-        </p>
+        <div className="text-gray-600 text-sm md:text-base space-y-6">
+          <div className="space-y-2">
+            <p className="leading-relaxed">入社当初から6年半にわたりポイントサイトの企画・設計・開発・保守を担当し、フルサイクルエンジニアとして活動。</p>
+            <p className="leading-relaxed">要件定義から運用改善まで一貫して担うプロダクトエンジニア。技術・運用・ビジネスを横断し、仕組みから改善してきました。</p>
+            <p className="leading-relaxed">2025年11月以降は広告事業領域へ異動し、広告配信・トラッキング・管理基盤に関わる開発および改善に取り組んでいます。</p>
+          </div>
+
+          <details className="group">
+            <summary className="cursor-pointer list-none text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors">
+              <span className="group-open:hidden">私の仕事スタイルをもっと詳しく見る👉️</span>
+              <span className="hidden group-open:inline">閉じる👆️</span>
+            </summary>
+
+            <div className="mt-4 space-y-6">
+              <div>
+                <p className="font-semibold text-gray-700 mb-2">🛠 担当領域</p>
+                <ul className="space-y-1 mb-3">
+                  <li>● 要件定義・設計・実装・テスト・リリース・運用改善</li>
+                  <li>● PHPを中心としたバックエンド開発</li>
+                  <li>● 管理画面 / LP改修などのフロント実装</li>
+                  <li>● データベース設計・改善</li>
+                  <li>● 運用バッチ開発</li>
+                  <li>● レガシーシステム改修</li>
+                </ul>
+                <p className="leading-relaxed">既存システムを前提とした改修案件が多く、複雑な依存関係を理解した上で安全に変更を進める開発を得意としています。</p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-700 mb-2">🚀 推進してきたこと</p>
+                <p className="leading-relaxed mb-2">最大7名規模のチームにてチームリーダーおよびプロダクトマネージャーを経験。</p>
+                <ul className="space-y-1 mb-3">
+                  <li>● 開発タスクの優先度整理・進行管理</li>
+                  <li>● ビジネス要件と技術制約の調整</li>
+                  <li>● 関係部署との合意形成</li>
+                  <li>● 障害対応フロー・運用プロセスの整備</li>
+                  <li>● ドキュメント文化・Issue管理の定着</li>
+                </ul>
+                <p className="leading-relaxed">属人的になりがちな運用や障害対応に対し、リアルタイム記録や情報共有フローを整備し、チーム全体で再現性のある体制づくりを推進してきました。</p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-700 mb-2">💡 開発スタンス</p>
+                <p className="leading-relaxed">単に機能を実装するだけでなく、「なぜその課題が発生しているのか」「運用を含めてどうすれば継続的に改善できるか」という視点を持ち、技術・運用・ビジネスのバランスを取りながらプロダクト改善を進めていくように意識しております。</p>
+              </div>
+            </div>
+          </details>
+        </div>
       </div>
 
       {/* プロジェクト一覧 */}

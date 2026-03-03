@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const WorkExperience = ({ year, company, role, details, link }) => {
+const WorkExperience = ({ year, company, role, details, departments = null, departmentsLabel = null, link = null }) => {
   return (
     <div className="flex mb-10 work-experience" style={{marginTop: '40px'}}>
       <div className="flex-shrink-0 w-16 text-right pr-4">
@@ -34,6 +34,20 @@ const WorkExperience = ({ year, company, role, details, link }) => {
             <li key={index}>{detail}</li>
           ))}
         </ul>
+        <br />
+        {Array.isArray(departments) && departments.length > 0 && (
+          <div className="mt-4 pt-3 border-t border-gray-200">
+            <p className="text-sm text-gray-500 mb-2">{departmentsLabel ?? "所属部署の変遷"}</p>
+            <ul className="space-y-2 text-sm">
+              {departments.map((dept, index) => (
+                <li key={index} className="grid grid-cols-1 md:grid-cols-[160px_1fr]">
+                  <span className="text-gray-500">{dept.period}</span>
+                  <span>{dept.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         {link && (
           <div style={{ marginTop: '20px' }}>
             <Link
