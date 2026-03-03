@@ -46,7 +46,7 @@ public/
 
 - **フレームワーク**: Next.js 14.2.5 (App Router)
 - **UI**: React 18, TypeScript 5（一部 .js コンポーネントが混在）
-- **スタイリング**: Tailwind CSS 3.4 + SCSS Modules（コンポーネントごとに1手法に統一）
+- **スタイリング**: Tailwind CSS 3.4 + SCSS Modules + インラインスタイル（混在、整理予定）
 - **UIコンポーネント**: shadcn/ui, FontAwesome 6, Lucide React
 - **フォント**: Zen Maru Gothic（本文）, Bungee Shade（プロフィールタイトル）
 - **パスエイリアス**: `@/*` → `src/*`（tsconfig.json）
@@ -82,15 +82,14 @@ npm run lint   # ESLint チェック
 
 ## 🎨 スタイリングルール
 
-**1コンポーネント1手法を原則とする。** 既存ファイルのパターンを踏襲すること。
+Tailwind CSS・SCSS Modules・インラインスタイルが混在している。**既存ファイルのパターンを踏襲すること。**
 
-| 手法 | 使用コンポーネント | 原則 |
-|-----|-----------------|------|
-| **Tailwind CSS** | ページ全般・HobbyCard・WorkExperience・LanguageSkill・PersonalInfo | 動的ホバーは `group/group-hover:*`、`hover:*`、`transition` で表現 |
-| **SCSS Modules** | Navbar, Footer, TitleWithIcon（Resume.module.scss） | 疑似要素（::before/::after）など Tailwind で困難な表現に使用 |
-| **インラインスタイル** | SkillBar のみ（`width: ${percentage}%`） | 動的な数値を要する場合のみ許容 |
+| 手法 | 主な使用箇所 |
+|-----|------------|
+| **Tailwind CSS** | ページ全般・WorkExperience（レイアウト部分）・HobbyCard |
+| **SCSS Modules** | Navbar, Footer, Resume.module.scss（LanguageSkill・SkillBar・TitleWithIcon・PersonalInfo が参照）|
+| **インラインスタイル** | WorkExperience（ボタン・ドット）・LanguageSkill（ドット）・SkillBar（動的幅）|
 
-- **React state でのスタイル制御は避ける**（`group-hover:` 等の CSS で代替）
 - `cn()` ユーティリティ（`src/lib/utils.ts`）は Tailwind クラスを条件付き結合する際に使用
 - レスポンシブブレークポイント: `md:` (768px) を主に使用
 - shadcn/ui の新規コンポーネントは `src/components/ui/` に配置
@@ -122,6 +121,23 @@ npm run lint   # ESLint チェック
 - ❌ 禁止: 「おそらく〜」「〜のはず」「一般的に〜」
 - ✅ 必須: 実際のファイルを確認してから報告（`ファイルパス:行番号` で証拠提示）
 - 少しでも迷ったら必ずユーザーに質問
+
+---
+
+## 🗒️ TODO
+
+### スタイリング整理（1コンポーネント1手法を目標）
+
+方針: React state を使わずに CSS で表現できるものは CSS で。インラインは動的な数値のみ許容。
+
+| コンポーネント | 現状 | 目標 |
+|-------------|------|------|
+| `HobbyCard.tsx` | Tailwind + インライン + `useState` | `useState` → `group/group-hover:` + `max-h-0 group-hover:max-h-96 overflow-hidden` でホバー制御。`style={{fontSize}}` → `text-[100px]` |
+| `WorkExperience.js` | Tailwind + インライン大量 + `onMouseEnter/Leave` | インライン全廃。ホバーは `hover:bg-blue-700` 等の Tailwind クラスで。`'use client'` も削除可 |
+| `LanguageSkill.js` | SCSS + インライン（ドット） | Tailwind のみ。ドット充填は `${index < level ? 'bg-black' : 'bg-white'}` 条件クラスで |
+| `PersonalInfo.js` | Tailwind + SCSS 混在 | Tailwind のみ。`lefttitleContainer` 除去、`resumePicture` → `rounded-full overflow-hidden` |
+| `TitleWithIcon.js` | Tailwind + SCSS 混在 | SCSS のみ。外側 div に `.titleIconWrapper` を Resume.module.scss に追加して Tailwind を除去 |
+| `SkillBar.js` | SCSS + インライン（`width: %`） | **変更不要**（動的数値のインラインは許容） |
 
 ---
 
