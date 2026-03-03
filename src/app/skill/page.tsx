@@ -18,7 +18,7 @@ export default function Component() {
               </div>
               <div className="flex justify-between">
                 <span>React</span>
-                <span>1年</span>
+                <span>2年</span>
               </div>
             </div>
           </CardContent>
@@ -30,16 +30,12 @@ export default function Component() {
           <CardContent>
             <div className="space-y-2">
               <div className="flex justify-between">
-                <span>php</span>
+                <span>PHP</span>
                 <span>7年</span>
               </div>
               <div className="flex justify-between">
-                <span>ruby</span>
-                <span>1年</span>
-              </div>
-              <div className="flex justify-between">
-                <span>python</span>
-                <span>1年</span>
+                <span>Ruby on Rails</span>
+                <span>2年</span>
               </div>
             </div>
           </CardContent>
@@ -50,7 +46,7 @@ export default function Component() {
           </CardHeader>
           <CardContent>
             <div className="flex justify-between">
-              <span>aws</span>
+              <span>AWS</span>
               <span>3年</span>
             </div>
           </CardContent>
@@ -62,16 +58,16 @@ export default function Component() {
           <CardContent>
             <div className="space-y-2">
               <div className="flex justify-between">
-                <span>mysql</span>
+                <span>MySQL</span>
                 <span>7年</span>
               </div>
               <div className="flex justify-between">
-                <span>oracle</span>
+                <span>Oracle</span>
                 <span>3年</span>
               </div>
               <div className="flex justify-between">
-                <span>dynamo</span>
-                <span>1年</span>
+                <span>Redshift</span>
+                <span>7年</span>
               </div>
             </div>
           </CardContent>
@@ -88,11 +84,11 @@ export default function Component() {
               </div>
               <div className="flex justify-between">
                 <span>jQuery</span>
-                <span>6年</span>
+                <span>7年</span>
               </div>
               <div className="flex justify-between">
-                <span>typescript</span>
-                <span>1年</span>
+                <span>Typescript</span>
+                <span>3年</span>
               </div>
               <div className="flex justify-between">
                 <span>cakePHP</span>
@@ -108,36 +104,40 @@ export default function Component() {
           <CardContent>
             <div className="space-y-2">
               <div className="flex justify-between">
-                <span>git</span>
+                <span>Git</span>
                 <span>10年</span>
               </div>
               <div className="flex justify-between">
-                <span>github</span>
+                <span>GitHub</span>
                 <span>10年</span>
               </div>
               <div className="flex justify-between">
-                <span>gitlab</span>
-                <span>6年</span>
+                <span>GitLab</span>
+                <span>7年</span>
               </div>
               <div className="flex justify-between">
-                <span>backlog</span>
+                <span>BitBucket</span>
+                <span>1年</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Backlog</span>
                 <span>3年</span>
               </div>
               <div className="flex justify-between">
-                <span>trello</span>
+                <span>Trello</span>
                 <span>2年</span>
               </div>
               <div className="flex justify-between">
-                <span>redmine</span>
+                <span>Redmine</span>
                 <span>2年</span>
               </div>
               <div className="flex justify-between">
-                <span>bitbucket</span>
+                <span>Redash</span>
                 <span>1年</span>
               </div>
               <div className="flex justify-between">
-                <span>Google Search Console</span>
-                <span>1年</span>
+                <span>Slack</span>
+                <span>12年</span>
               </div>
             </div>
           </CardContent>
@@ -165,6 +165,10 @@ export default function Component() {
           </CardHeader>
           <CardContent>
             <div className="space-y-2">
+              <div className="flex justify-between">
+                <span>swift</span>
+                <span>2年</span>
+              </div>
               <div className="flex justify-between">
                 <span>App Store Connect</span>
                 <span>5年</span>
