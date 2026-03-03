@@ -64,6 +64,13 @@
     border-radius: 50%;
 }
 
+.titleIconWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
 .lefttitleContainer {
     display: flex;
     align-items: center;

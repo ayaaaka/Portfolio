@@ -5,10 +5,10 @@ import styles from '@/styles/Resume.module.scss';
 
 const TitleWithIcon = ({icon, title}) => {
   return (
-    <div className="flex flex-col items-center mt-10">
+    <div className={styles.titleIconWrapper}>
       <FontAwesomeIcon icon={icon} size='xl' />
-    <h2 className={`text-2xl ${styles.lefttitleContainer}`}>{title}</h2>
-  </div>
+      <h2 className={`${styles.lefttitleContainer} ${styles.lefttitle}`}>{title}</h2>
+    </div>
   );
 };
 

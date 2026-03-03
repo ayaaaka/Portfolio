@@ -45,7 +45,7 @@ public/
 
 - **フレームワーク**: Next.js 14.2.5 (App Router)
 - **UI**: React 18, TypeScript 5（一部 .js コンポーネントが混在）
-- **スタイリング**: Tailwind CSS 3.4 + SCSS Modules + インラインスタイル（混在）
+- **スタイリング**: Tailwind CSS 3.4 + SCSS Modules（コンポーネントごとに1手法に統一）
 - **UIコンポーネント**: shadcn/ui, FontAwesome 6, Lucide React
 - **フォント**: Zen Maru Gothic（本文）, Bungee Shade（プロフィールタイトル）
 - **パスエイリアス**: `@/*` → `src/*`（tsconfig.json）
@@ -81,15 +81,15 @@ npm run lint   # ESLint チェック
 
 ## 🎨 スタイリングルール
 
-3種のスタイル手法が混在している。
-**既存ファイルのパターンを踏襲すること。**
+**1コンポーネント1手法を原則とする。** 既存ファイルのパターンを踏襲すること。
 
-| 手法 | 使用箇所 | 用途 |
-|-----|---------|------|
-| **Tailwind CSS** | ページ・新規コンポーネント | レイアウト、グリッド、フレックス、色、余白 |
-| **SCSS Modules** | Navbar, Footer, Profile, Resume | 既存スタイルの編集は scss ファイルを修正 |
-| **インラインスタイル** | WorkExperience, LanguageSkill | ホバー効果など動的スタイル |
+| 手法 | 使用コンポーネント | 原則 |
+|-----|-----------------|------|
+| **Tailwind CSS** | ページ全般・HobbyCard・WorkExperience・LanguageSkill・PersonalInfo | 動的ホバーは `group/group-hover:*`、`hover:*`、`transition` で表現 |
+| **SCSS Modules** | Navbar, Footer, TitleWithIcon（Resume.module.scss） | 疑似要素（::before/::after）など Tailwind で困難な表現に使用 |
+| **インラインスタイル** | SkillBar のみ（`width: ${percentage}%`） | 動的な数値を要する場合のみ許容 |
 
+- **React state でのスタイル制御は避ける**（`group-hover:` 等の CSS で代替）
 - `cn()` ユーティリティ（`src/lib/utils.ts`）は Tailwind クラスを条件付き結合する際に使用
 - レスポンシブブレークポイント: `md:` (768px) を主に使用
 - shadcn/ui の新規コンポーネントは `src/components/ui/` に配置
