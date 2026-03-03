@@ -1,11 +1,18 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import Navbar from '@/components/Navbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default function Component() {
   return (
     <div className="flex flex-col items-center p-4 space-y-14">
       <Navbar />
-      <div className="grid gap-4 md:grid-cols-2 w-full">
+      <div className="w-full flex flex-col gap-2">
+        <div className="flex items-center justify-end gap-1.5 text-sm text-gray-400">
+          <FontAwesomeIcon icon={faCalendarAlt} className="w-3.5 h-3.5" />
+          <span>Last updated: 2026.03.03</span>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 w-full">
       <Card className="w-full">
           <CardHeader>
             <CardTitle>frontend</CardTitle>
@@ -184,6 +191,7 @@ export default function Component() {
             </div>
           </CardContent>
         </Card>
+        </div>
       </div>
     </div>
   )
